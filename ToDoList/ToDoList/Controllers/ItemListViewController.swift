@@ -20,9 +20,20 @@ class ItemListViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    // NOT BEST PRACTICES
+    // NOT BEST PRACTICE
     // Custom delegation would be best use case here .....
     tableView.reloadData()
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showItemDetail" {
+      guard let indexPath = tableView.indexPathForSelectedRow,
+        let detailViewController = segue.destination as? ItemDetailViewController else {
+          fatalError("indexPath, detailViewController nil")
+      }
+      let item = ItemModel.getItems()[indexPath.row]
+      detailViewController.item = item
+    } 
   }
 }
 

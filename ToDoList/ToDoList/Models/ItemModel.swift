@@ -51,4 +51,9 @@ final class ItemModel {
       print("property list encoding error: \(error)")
     }
   }
+  
+  static func updateItem(updatedItem: Item, atIndex index: Int) {
+    items[index] = updatedItem
+    save()
+  }
 }

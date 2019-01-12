@@ -64,12 +64,11 @@
 		57A6C1F321E9240600C883AA /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				57A6C20621E9242200C883AA /* DataPersistenceManager.swift */,
-				57A6C1F821E9240600C883AA /* Main.storyboard */,
-				57A6C20E21E92A2E00C883AA /* Item.swift */,
-				57A6C21021E92C3900C883AA /* ItemModel.swift */,
+				57A6C21321EA39D400C883AA /* File Manager Services */,
+				57A6C21221EA39CA00C883AA /* Models */,
 				57A6C20C21E927EA00C883AA /* Controllers */,
 				57A6C20D21E9280500C883AA /* Supoorting Files */,
+				57A6C1F821E9240600C883AA /* Main.storyboard */,
 				57A6C20021E9240800C883AA /* Info.plist */,
 			);
 			path = ToDoList;
@@ -93,6 +92,23 @@
 				57A6C1FD21E9240800C883AA /* LaunchScreen.storyboard */,
 			);
 			path = "Supoorting Files";
+			sourceTree = "<group>";
+		};
+		57A6C21221EA39CA00C883AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57A6C20E21E92A2E00C883AA /* Item.swift */,
+				57A6C21021E92C3900C883AA /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		57A6C21321EA39D400C883AA /* File Manager Services */ = {
+			isa = PBXGroup;
+			children = (
+				57A6C20621E9242200C883AA /* DataPersistenceManager.swift */,
+			);
+			path = "File Manager Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

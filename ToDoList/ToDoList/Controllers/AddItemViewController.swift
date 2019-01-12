@@ -19,6 +19,7 @@ class AddItemViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupTextViews()
+    itemTitleTextView.becomeFirstResponder()
   }
   
   private func setupTextViews() {
@@ -75,6 +76,16 @@ extension AddItemViewController: UITextViewDelegate {
   }
   
   func textViewDidEndEditing(_ textView: UITextView) {
-    
+    if textView.text == "" {
+      if textView == itemTitleTextView || textView == itemDescriptionTextView {
+        if textView == itemTitleTextView {
+          textView.text = itemTitlePlaceholder
+          textView.textColor = .lightGray
+        } else if textView == itemDescriptionTextView {
+          textView.text = itemDescriptionPlaceholder
+          textView.textColor = .lightGray
+        }
+      }
+    }
   }
 }
